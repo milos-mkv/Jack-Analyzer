@@ -1,4 +1,18 @@
-#!/usr/bin/python3
+"""
+------------------------------------------------------------------------------
+    @file       jack_analyzer.py
+    @author     Milos Milicevic (milosh.mkv@gmail.com)
+    @brief      Creates xml representation of provided jack code.
+
+    @version    0.1
+    @date       2020-08-27
+
+    @copyright 	Copyright (c) 2020
+    
+    Distributed under the MIT software license, see the accompanying
+    file COPYING or http://www.opensource.org/licenses/mit-license.php.
+------------------------------------------------------------------------------
+"""
 
 from src.tokenizer import Tokenizer
 from src.parser import Parser
