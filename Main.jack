@@ -8,12 +8,9 @@
  */
 class Main {
 
-    field int x,z,y;
-
     /** Initializes a new game and starts it. */    
     function void main() {
-        var int a;
-        let a = x + (y - z);
+        do Output.print("Hello world!");
         return;
     }
 }

@@ -348,10 +348,10 @@ class Parser(object):
         self.xml_data.append("<term>")                  # Xml rep: <term>
         if self.tokenizer.next().type in ["integerConstant", "stringConstant"] or self.tokenizer.next().value in KEYWORD_CONSANTS:
             self.token = self.tokenizer.advance()   
-            self.xml_data.append(self.token.string())   # Xml rep:     <integerConstant | stringConstant | keyword> value </integerConstant | stringConstant | keyword>
+            self.xml_data.append(self.token.__str__())   # Xml rep:     <integerConstant | stringConstant | keyword> value </integerConstant | stringConstant | keyword>
         elif self.tokenizer.next().value in UNARY_OP:
             self.token = self.tokenizer.advance()
-            self.xml_data.append(self.token.string())   # Xml rep:     <symbol> unaryOp </symbol>
+            self.xml_data.append(self.token.__str__())   # Xml rep:     <symbol> unaryOp </symbol>
             self.compile_term()                         # Compile term.
         elif self.tokenizer.next().value == "(":
             self.check_for_value("(")                   # Xml rep:     <symbol> ( </symbol>
